@@ -1,7 +1,9 @@
 @import '../../reusable-styling/mixins/mixins';
+@import '../../reusable-styling/fonts';
 
 body{
     background-color: $liver;
+    font-family: "Raleway";
 }
 
 .home{
@@ -15,11 +17,13 @@ body{
 
     &__body{
         margin-top: 50px;
+        font-size: 20px;
         height: 80%;
         width: 80%;
         background-color: $apricot;
         border-radius: 10px;
         padding: 16px;
+        color: $liver;
     }
 
     &__button{
