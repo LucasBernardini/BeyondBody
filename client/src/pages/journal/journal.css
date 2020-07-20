@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Light.ttf");
+  font-weight: lighter;
+}
+
+body {
+  background-color: #504D56;
+  font-family: "Raleway";
+}
+
+.journal {
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: auto 16px;
+}
+
+.journal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.journal__body {
+  margin-top: 50px;
+  font-size: 20px;
+  height: 80%;
+  width: 80%;
+  background-color: #FFCDB2;
+  border-radius: 10px;
+  padding: 16px;
+  color: #504D56;
+}
+
+.journal__header {
+  font-size: 20px;
+}
+
+.journal__subHead {
+  font-size: 18px;
+}
+
+.journal__mood {
+  background-color: #FFB4A2;
+  border-radius: 10px;
+  margin: 10px 16px;
+  padding: 4px;
+  text-align: center;
+  width: 50%;
+}
+
+.journal__entry {
+  border-radius: 10px;
+  border: 3px solid #FFB4A2;
+  width: 90%;
+  height: 140px;
+  padding: 10px;
+  font-family: "Raleway";
+}
+
+.journal__button {
+  margin-top: 40px;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: 4px solid #FFB4A2;
+  background-color: #FFCDB2;
+  font-size: 18px;
+  color: #504D56;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.journal__button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.journal__button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.journal__button:hover span {
+  padding-right: 25px;
+}
+
+.journal__button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*# sourceMappingURL=journal.css.map */

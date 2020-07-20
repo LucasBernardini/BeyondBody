@@ -1,9 +1,36 @@
 import React from 'react'
+import firebase from "firebase";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
-export default function Login() {
+export default class Login extends React.Component {
+    
+    uiConfig = {
+        signInFlow: "popup",
+        signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        ],
+        callbacks: {
+          signInSuccess: () => false,
+        },
+      };
+
+    render(){
     return (
         <div>
-            
+            {this.props.isSignedIn ? (
+                <div>
+                    <Redirect to="/journal" />
+                </div>
+              ) : (
+                <StyledFirebaseAuth
+                uiConfig={this.uiConfig}
+                firebaseAuth={firebase.auth()}
+                />
+                )}         
         </div>
     )
+}
 }

@@ -1,0 +1,30 @@
+.navbar {
+  background-color: #FFB4A2;
+  color: #504D56;
+  height: 7rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+.navbar__header {
+  margin: 0;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.navbar__streak {
+  margin: 0;
+  padding: 0 16px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=navbar.css.map */

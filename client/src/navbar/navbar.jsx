@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.scss'
+import firebase from "firebase";
 
 export default function Navbar() {
     return (
@@ -8,7 +9,7 @@ export default function Navbar() {
         <h1 className="navbar__header">Beyond <br />Body</h1>
         </div>
         <div>
-        <p className="navbar__streak">streak</p>
+        <button className="signout__button" onClick={() => firebase.auth().signOut()}>Signout</button>
         </div>
         </div>
     )

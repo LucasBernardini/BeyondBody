@@ -1,0 +1,63 @@
+@import '../../reusable-styling/mixins/mixins';
+@import '../../reusable-styling/fonts';
+
+body{
+    background-color: $liver;
+    font-family: "Raleway";
+}
+
+.journal{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto 16px;
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+    }
+    &__body{
+        margin-top: 50px;
+        font-size: 20px;
+        height: 80%;
+        width: 80%;
+        background-color: $apricot;
+        border-radius: 10px;
+        padding: 16px;
+        color: $liver;
+    }
+    &__header{
+        font-size: 20px;
+    }
+    &__subHead{
+        font-size: 18px;
+    }
+    &__mood{
+        background-color: $melon;
+        border-radius: 10px;
+        margin: 10px 16px;
+        padding: 4px;
+        text-align: center;
+        width: 50%;
+        &--check{
+        }
+    }
+    &__entry{
+        border-radius: 10px;
+        border: 3px solid $melon;
+        width: 90%;
+        height: 140px;
+        // background-color:;
+        padding: 10px;
+        font-family: "Raleway";
+
+    }
+    &__button{
+        margin-top: 40px;
+        @include button;
+    }
+}
+
