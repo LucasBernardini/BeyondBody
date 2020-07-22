@@ -3,39 +3,36 @@ import "./journal.scss";
 import { Redirect, Link } from "react-router-dom";
 import firebase from "../../firebase";
 
-
-
 export default class Journal extends React.Component {
-    state = {
-        mood: [],
-        entry: "",
-    };
-    
-    
-    journalEntry = () => {
-        // console.log(event);
-        const db = firebase.firestore();
-        db.collection(this.props.userUID)
-        .doc()
-        .set({
-            mood: this.state.mood,
-            entry: this.state.entry
-        })
-        .then(() => console.log("Document successfully written!"))
-        .catch(() => console.error("Error writing document"));
-    };
-    
-    valueInput = (e) => {
-        this.setState({ mood: [e.target.value] });
-        //   console.log(this.state.mood)
-    }
-    
-    textInput = (e) => {
-        this.setState({entry: e.target.value})
-        //   console.log(this.state.entry)
-    }
-    
-    render() {
+  state = {
+    mood: [],
+    entry: "",
+  };
+
+  journalEntry = () => {
+    // console.log(event);
+    const db = firebase.firestore();
+    db.collection(this.props.userUID)
+      .doc()
+      .set({
+        mood: this.state.mood,
+        entry: this.state.entry,
+      })
+      .then(() => console.log("Document successfully written!"))
+      .catch(() => console.error("Error writing document"));
+  };
+
+  valueInput = (e) => {
+    this.setState({ mood: [e.target.value] });
+    //   console.log(this.state.mood)
+  };
+
+  textInput = (e) => {
+    this.setState({ entry: e.target.value });
+    //   console.log(this.state.entry)
+  };
+
+  render() {
     return (
       <div>
         {this.props.isSignedIn ? (
@@ -50,35 +47,60 @@ export default class Journal extends React.Component {
                   <div className="journal__container">
                     <label className="journal__mood">
                       Optimistic
-                      <input value="optimistic" onChange={this.valueInput} className="journal__mood--check" type="checkbox" />
+                      <input
+                        value="optimistic"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
                       <span className="journal__mood--check"></span>
                     </label>
                   </div>
                   <div className="journal__container">
                     <label className="journal__mood">
                       Focused
-                      <input value="focused" onChange={this.valueInput} className="journal__mood--check" type="checkbox" />
+                      <input
+                        value="focused"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
                       <span className="journal__mood--check"></span>
                     </label>
                   </div>
                   <div className="journal__container">
                     <label className="journal__mood">
                       Angry
-                      <input value="angry" onChange={this.valueInput} className="journal__mood--check" type="checkbox" />
+                      <input
+                        value="angry"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
                       <span className="journal__mood--check"></span>
                     </label>
                   </div>
                   <div className="journal__container">
                     <label className="journal__mood">
                       Stressed
-                      <input value="stressed" onChange={this.valueInput} className="journal__mood--check" type="checkbox" />
+                      <input
+                        value="stressed"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
                       <span className="journal__mood--check"></span>
                     </label>
                   </div>
                   <div className="journal__container">
                     <label className="journal__mood">
                       Depressed
-                      <input value="depressed" onChange={this.valueInput} className="journal__mood--check" type="checkbox" />
+                      <input
+                        value="depressed"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
                       <span className="journal__mood--check"></span>
                     </label>
                   </div>
@@ -97,7 +119,10 @@ export default class Journal extends React.Component {
                     wrap="soft"
                   />
                   <Link to="/menu">
-                    <button onClick={this.journalEntry} className="journal__button">
+                    <button
+                      onClick={this.journalEntry}
+                      className="journal__button"
+                    >
                       submit
                     </button>
                   </Link>
