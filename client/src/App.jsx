@@ -11,12 +11,12 @@ import Menu from "./pages/menu/menu";
 
 
 class App extends React.Component {
-  state = { isSignedIn: false };
+  state = { isSignedIn: false, userUID: "" };
   
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged((user) => {
-      this.setState({ isSignedIn: !!user });
-    });
+      this.setState({ isSignedIn: !!user, userUID: user.uid });
+        });
   };
 
   render() {
@@ -33,10 +33,10 @@ class App extends React.Component {
               <Login isSignedIn={this.state.isSignedIn}/>
             </Route>
             <Route path="/journal">
-                <Journal isSignedIn={this.state.isSignedIn} />
+                <Journal isSignedIn={this.state.isSignedIn} userUID={this.state.userUID} />
             </Route>
             <Route path="/menu">
-              <Menu isSignedIn={this.state.isSignedIn}/>
+              <Menu isSignedIn={this.state.isSignedIn} userUID={this.state.userUID} />
             </Route>
           </Switch>
         </Router>

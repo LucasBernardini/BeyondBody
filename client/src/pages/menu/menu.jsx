@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from '../../firebase';
+import { Redirect } from 'react-router-dom';
 
 export default function Menu() {
     const [entries, setEntries] = React.useState([]);
@@ -14,10 +15,14 @@ export default function Menu() {
     }, [])
 
     return (
-        <ul>
-            {entries.map(entry => (
-                <li>{entry.name}</li>
-            ))}
-        </ul>
+        <div>
+                <div>
+                  <ul>
+                      {entries.map(entry => (
+                          <li>{entry.entry}</li>
+                      ))}
+                  </ul>
+                </div>
+        </div>
     )
 }
