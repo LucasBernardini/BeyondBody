@@ -26,7 +26,7 @@ export default class Journal extends React.Component {
     };
     
     valueInput = (e) => {
-        this.setState({ mood: [...e.target.value] });
+        this.setState({ mood: [e.target.value] });
         //   console.log(this.state.mood)
     }
     
