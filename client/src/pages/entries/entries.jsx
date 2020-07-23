@@ -1,6 +1,7 @@
 import React from "react";
 import firebase from "../../firebase";
 import { Redirect, Link } from "react-router-dom";
+import './entries.scss'
 
 export default function Entries(props) {
   const [entries, setEntries] = React.useState([]);
@@ -15,11 +16,11 @@ export default function Entries(props) {
   }, []);
 
   return (
-    <div>
+    <div className="entries">
         <Link to="/menu">
-        <button>Back to menu</button>
+        <button className="entries__button">Back to menu</button>
         </Link>
-      <div>
+      <div className="entries--container">
         {props.isSignedIn ? (
           <div className="entry">
             {entries.map((entry) => (
