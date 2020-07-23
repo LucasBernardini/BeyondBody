@@ -1,1 +1,66 @@
-/* No CSS *//*# sourceMappingURL=menu.css.map */
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Light.ttf");
+  font-weight: lighter;
+}
+
+body {
+  background-color: #504D56;
+  font-family: "Raleway";
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__entry--container {
+  margin-top: 50px;
+  font-size: 20px;
+  height: 80%;
+  width: 8rem;
+  background-color: #FFCDB2;
+  border-radius: 10px;
+  padding: 24px;
+  color: #504D56;
+  text-decoration: none;
+}
+
+.menu__title {
+  font-size: 18px;
+  text-decoration: none !important;
+  text-transform: capitalize;
+}
+
+.menu__title:visited {
+  text-decoration: none !important;
+}
+
+.menu__title:active {
+  text-decoration: none !important;
+}
+/*# sourceMappingURL=menu.css.map */

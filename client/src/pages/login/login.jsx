@@ -1,10 +1,6 @@
 import React from "react";
 import firebase from "firebase";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   Redirect,
 } from "react-router-dom";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";

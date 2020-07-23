@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import firebase from "./firebase";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import "./App.scss";
 import Navbar from "./navbar/navbar";
 import Home from "./pages/home/home";
@@ -22,9 +21,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
 
         <Router>
+        <Navbar isSignedIn={this.state.isSignedIn} />
           <Switch>
             <Route exact path="/">
               <Home />

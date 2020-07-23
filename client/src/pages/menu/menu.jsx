@@ -1,24 +1,18 @@
 import React from "react";
-import firebase from "../../firebase";
 import { Redirect, Link } from "react-router-dom";
+import "./menu.scss";
 
 export default function Menu(props) {
   return (
-    <div>
-        <Link to="/about">
-      <div>
-        <h2>About</h2>
-      </div>
+    <div className="menu">
+      <Link className="menu__entry--container" to="/about">
+        <h2 className="menu__title">About</h2>
       </Link>
-      <Link to="/entryList">
-      <div>
-        <h2>View All Entries</h2>
-      </div>
+      <Link className="menu__entry--container" to="/entryList">
+        <h2 className="menu__title">View All Entries</h2>
       </Link>
-      <Link to="/journal">
-      <div>
-        <h2>Add Another Entry</h2>
-      </div>
+      <Link className="menu__entry--container" to="/journal">
+        <h2 className="menu__title">Add Another Entry</h2>
       </Link>
     </div>
   );
