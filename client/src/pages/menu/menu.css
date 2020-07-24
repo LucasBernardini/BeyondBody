@@ -16,6 +16,12 @@
   font-weight: lighter;
 }
 
+@font-face {
+  font-family: "Pacifico";
+  src: url("../assets/fonts/Pacifico-Regular.ttf");
+  font-weight: normal;
+}
+
 body {
   background-color: #504D56;
   font-family: "Raleway";

@@ -18,13 +18,13 @@ export default function Entries(props) {
   return (
     <div className="entries">
         <Link to="/menu">
-        <button className="entries__button">Back to menu</button>
+        <button className="entries__button">Back To Menu</button>
         </Link>
       <div className="entries--container">
         {props.isSignedIn ? (
           <div className="entry">
-            {entries.map((entry) => (
-              <div className="entry__container">
+            {entries.map((entry,index) => (
+              <div key={index} className="entry__container">
                 <p className="entry__mood">{entry.mood}</p>
                 <p className="entry__entry">{entry.entry}</p>
               </div>

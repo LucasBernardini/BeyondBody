@@ -1,1 +1,133 @@
-/* No CSS *//*# sourceMappingURL=about.css.map */
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Light.ttf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../assets/fonts/Pacifico-Regular.ttf");
+  font-weight: normal;
+}
+
+body {
+  background-color: #504D56;
+  font-family: "Raleway";
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto 16px;
+}
+
+.about__container {
+  margin-top: 20px;
+  font-size: 18px;
+  height: 80%;
+  width: 80%;
+  background-color: #FFCDB2;
+  border-radius: 10px;
+  padding: 24px;
+  color: #504D56;
+  border: 2px solid #FFB4A2;
+}
+
+.about__sub {
+  text-align: start;
+}
+
+.about__header {
+  color: #FFCDB2;
+  text-shadow: 1px #FFB4A2 solid;
+}
+
+.about__content {
+  text-align: start;
+}
+
+.about__name {
+  text-align: start;
+}
+
+.about__button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: 4px solid #FFB4A2;
+  background-color: #FFCDB2;
+  font-size: 18px;
+  color: #504D56;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: fixed;
+  top: 400px;
+  right: 16px;
+}
+
+.about__button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about__button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about__button:hover span {
+  padding-right: 25px;
+}
+
+.about__button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.about__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__contact--link {
+  width: 50px;
+  height: auto;
+  margin: auto 20px;
+}
+/*# sourceMappingURL=about.css.map */

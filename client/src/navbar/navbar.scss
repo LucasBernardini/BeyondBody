@@ -1,4 +1,17 @@
-@import '../reusable-styling/mixins/mixins';
+@import "../reusable-styling/mixins/mixins";
+@import '../reusable-styling/fonts';
+
+body{
+    font-family: "Raleway";
+}
+
+.style{
+    background-color: $melon;
+    color: $liver;
+    height: 7rem;
+    width: 100%;
+    border-radius: 15px;
+}
 
 .navbar{
     background-color: $melon;
@@ -12,13 +25,19 @@
     border-radius: 10px;
     
     &__header{
-        margin: 0;
+        margin: auto 16px;
+        padding: 0 16px;
+        font-size: 16px;
+        font-family: "Pacifico";
+    }
+    &__streak{
+        margin: auto 16px;
         padding: 0 16px;
         font-size: 16px;
     }
-    &__streak{
-        margin: 0;
-        padding: 0 16px;
-        font-size: 16px;
+    &__button{
+        @include button;
+        margin: auto 16px;
+
     }
 }

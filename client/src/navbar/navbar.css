@@ -1,3 +1,39 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../assets/fonts/Raleway/static/Raleway-Light.ttf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../assets/fonts/Pacifico-Regular.ttf");
+  font-weight: normal;
+}
+
+body {
+  font-family: "Raleway";
+}
+
+.style {
+  background-color: #FFB4A2;
+  color: #504D56;
+  height: 7rem;
+  width: 100%;
+  border-radius: 15px;
+}
+
 .navbar {
   background-color: #FFB4A2;
   color: #504D56;
@@ -17,14 +53,56 @@
 }
 
 .navbar__header {
-  margin: 0;
+  margin: auto 16px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-family: "Pacifico";
+}
+
+.navbar__streak {
+  margin: auto 16px;
   padding: 0 16px;
   font-size: 16px;
 }
 
-.navbar__streak {
-  margin: 0;
-  padding: 0 16px;
-  font-size: 16px;
+.navbar__button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: 4px solid #FFB4A2;
+  background-color: #FFCDB2;
+  font-size: 18px;
+  color: #504D56;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto 16px;
+}
+
+.navbar__button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar__button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar__button:hover span {
+  padding-right: 25px;
+}
+
+.navbar__button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 /*# sourceMappingURL=navbar.css.map */

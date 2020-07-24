@@ -1,0 +1,59 @@
+@import '../../reusable-styling/mixins/mixins';
+@import '../../reusable-styling/fonts';
+
+body{
+    background-color: $liver;
+    font-family: "Raleway";
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto 16px;
+
+    &__container{
+        margin-top: 20px;
+        font-size: 18px;
+        height: 80%;
+        width: 80%;
+        background-color: $apricot;
+        border-radius: 10px;
+        padding: 24px;
+        color: $liver;
+        border: 2px solid $melon;
+    }
+    &__sub{
+        text-align: start;
+    }
+    &__header{
+        color: $apricot;
+        text-shadow: 1px $melon solid;
+    }
+    &__content{
+        text-align: start;
+
+    }
+    &__name{
+        text-align: start;
+    }
+    &__button{
+    @include button;
+    position: fixed;
+    top: 400px;
+    right: 16px;
+    }
+    &__contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--link{
+            width: 50px;
+            height: auto;
+            margin: auto 20px;
+        }
+        &--number{
+
+        }
+    }
+}
