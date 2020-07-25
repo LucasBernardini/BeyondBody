@@ -1,0 +1,39 @@
+@import '../../reusable-styling/mixins/mixins';
+@import '../../reusable-styling/fonts';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    background-color: $melon;
+    border-radius: 10px;
+    margin-top: 200px;
+    font-family: "Raleway";
+    
+    &__container--1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    &__container--2{
+        border-top: 4px solid $apricot;
+        margin: auto 16px;
+        border-radius: 3px;
+    }
+    &__direct{
+    font-size: 24px;
+    color: $liver;
+    background-color: $apricot;
+    padding: 5px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        margin: 25px;
+    }
+    &__help{
+        color: $liver;
+        padding: 10px;
+
+    }
+}

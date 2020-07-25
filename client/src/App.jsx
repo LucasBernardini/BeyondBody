@@ -9,6 +9,7 @@ import Journal from "./pages/journal/journal";
 import Menu from "./pages/menu/menu";
 import Entries from "./pages/entries/entries";
 import About from "./pages/about/about";
+import Footer from "./pages/footer/footer";
 
 class App extends React.Component {
   state = { isSignedIn: false, userUID: "" };
@@ -56,6 +57,7 @@ class App extends React.Component {
               />
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </div>
     );
