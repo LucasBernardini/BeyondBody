@@ -14,7 +14,7 @@ export default function Navbar(props) {
         <h1 className="navbar__header">Beyond <br />Body</h1>
         </div>
         <div>
-        <button className="navbar__button" onClick={() => history.push("/")} >Signout</button>
+        <button className="navbar__button" onClick={firebase.auth().signOut().then(() => history.push("/"))} >Signout</button>
         </div>
           </div>
         ) : (

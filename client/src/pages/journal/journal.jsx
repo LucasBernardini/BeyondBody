@@ -42,7 +42,7 @@ export default class Journal extends React.Component {
                 <h1 className="journal__header">Welcome to your Journal</h1>
                 <form action="">
                   <h2 className="journal__subHead">
-                    Please select a mood based on how you are feeling:
+                    Please select one mood based on how you are feeling:
                   </h2>
                   <div className="journal__container">
                     <label className="journal__mood">
@@ -97,6 +97,30 @@ export default class Journal extends React.Component {
                       Depressed
                       <input
                         value="depressed"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
+                      <span className="journal__mood--check"></span>
+                    </label>
+                  </div>
+                  <div className="journal__container">
+                    <label className="journal__mood">
+                      Happy
+                      <input
+                        value="happy"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
+                      <span className="journal__mood--check"></span>
+                    </label>
+                  </div>
+                  <div className="journal__container">
+                    <label className="journal__mood">
+                      Anxious
+                      <input
+                        value="anxious"
                         onChange={this.valueInput}
                         className="journal__mood--check"
                         type="checkbox"

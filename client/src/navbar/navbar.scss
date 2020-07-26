@@ -29,6 +29,10 @@ body{
         padding: 0 16px;
         font-size: 16px;
         font-family: "Pacifico";
+        @include tabletSize{
+            font-size: 24px;
+            margin: auto 130px;
+        }
     }
     &__streak{
         margin: auto 16px;
@@ -38,6 +42,10 @@ body{
     &__button{
         @include button;
         margin: auto 16px;
+                        @include tabletSize{
+                            font-size: 20px;
+                            margin: auto 130px;
+                        }
 
     }
 }

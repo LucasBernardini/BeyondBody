@@ -1,8 +1,9 @@
 import React from "react";
 import "./about.scss";
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import linkedIn from "../../assets/logos/logo-linkedin.svg";
 import email from "../../assets/logos/mail.svg";
+import profilePic from "../../assets/images/profilePic.jpg"
 
 export default function About() {
   return (
@@ -31,6 +32,8 @@ export default function About() {
         <div className="about__container">
           <h2 className="about__sub">About the Creator</h2>
           <h3 className="about__name">Lucas Bernardini</h3>
+          <div className="about__container--bio">
+          <img className="about__profilePic" src={profilePic} alt="profile photo"/>
           <p className="about__content">
             Lucas is a recent graduate from Brainstations immersive 12 week Web
             Development Bootcamp. His working experience stems from a background
@@ -39,6 +42,7 @@ export default function About() {
             and problem solving. He is currently open and available to work,
             feel free to reach out through one of the methods listed below!
           </p>
+          </div>
           <div className="about__contact">
             <a href="https://www.linkedin.com/in/lucas-bernardini/">
               <img className="about__contact--link" src={linkedIn} alt="" />

@@ -14,16 +14,31 @@ body{
     
     }
     &--container{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
+        // display: flex;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: space-around;
+        // @include tabletSize{
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-evenly;
 
     }
 }
 
 .entry{
+    display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        @include tabletSize{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 40px 24px;
+        }
     &__container{
         margin-top: 50px;
         font-size: 20px;
@@ -36,14 +51,24 @@ body{
         text-decoration: none;
         font-size: 18px;
         border: 2px solid $melon;
+        @include tabletSize{
+            margin: 10px 24px;
+            width: 50%;
+            flex: 0 50%;
+        }
     }
     &__mood{
         font-weight: bold;
         background-color: $melon;
         border-radius: 10px;
+        @include tabletSize{
+            font-size: 32px;
+        }
 
     }
     &__entry{
-
+        @include tabletSize{
+            font-size: 24px;
+        }
     }
 }

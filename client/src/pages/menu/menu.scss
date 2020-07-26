@@ -12,9 +12,14 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    @include tabletSize{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 100px 24px;
+        align-content: center;
+    }
     &__entry--container{
         margin-top: 50px;
-        font-size: 20px;
         height: 80%;
         width: 8rem;
         background-color: $apricot;
@@ -22,11 +27,18 @@ body{
         padding: 24px;
         color: $liver;
         text-decoration: none;
+        @include tabletSize{
+            width: 15rem;
+            height: 100px;
+        }
     }
     &__title{
         font-size: 18px;
         text-decoration: none!important;
         text-transform: capitalize;
+        @include tabletSize{
+            font-size: 28px;
+        }
         &:visited{
             text-decoration: none!important;
         }
