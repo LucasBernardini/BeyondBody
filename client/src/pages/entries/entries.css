@@ -28,46 +28,39 @@ body {
 }
 
 .entries__button {
-  width: 10rem;
-  height: 2rem;
-  border-radius: 10px;
-  border: 4px solid #FFB4A2;
-  background-color: #FFCDB2;
-  font-size: 18px;
+  position: relative;
+  display: block;
   color: #504D56;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #FFB4A2;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
   position: fixed;
   top: 400px;
   right: 16px;
 }
 
-.entries__button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.entries__button span:after {
-  content: '\00bb';
+.entries__button::before {
+  background: #FFB4A2;
+  content: "";
   position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  width: 0%;
+  height: 100%;
 }
 
-.entries__button:hover span {
-  padding-right: 25px;
-}
-
-.entries__button:hover span:after {
-  opacity: 1;
-  right: 0;
+.entries__button:hover::before {
+  width: 100%;
 }
 
 .entries--container {
