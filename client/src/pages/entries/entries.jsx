@@ -31,19 +31,19 @@ export default function Entries(props) {
       <Link to="/menu">
         <button className="entries__button">Back To Menu</button>
       </Link>
-      <div>
-        <label htmlFor="moods">Filter by Mood</label>
-        <select onChange={e => selectMoods(e)} className="" name="moods">
-          <option value="all">
+      <div className="entries__filter">
+        <label className="entries__filter--title" htmlFor="moods">Filter by Mood:</label>
+        <select className="entries__filter--filter" onChange={e => selectMoods(e)} className="" name="moods">
+          <option className="entries__filter--option" value="all">
             All
           </option>
-          <option value="optimistic">Optimistic</option>
-          <option value="focused">Focused</option>
-          <option value="angry">Angry</option>
-          <option value="stressed">Stressed</option>
-          <option value="depressed">Depressed</option>
-          <option value="happy">Happy</option>
-          <option value="anxious">Anxious</option>
+          <option className="entries__filter--option" value="optimistic">Optimistic</option>
+          <option className="entries__filter--option" value="focused">Focused</option>
+          <option className="entries__filter--option" value="angry">Angry</option>
+          <option className="entries__filter--option" value="stressed">Stressed</option>
+          <option className="entries__filter--option" value="depressed">Depressed</option>
+          <option className="entries__filter--option" value="happy">Happy</option>
+          <option className="entries__filter--option" value="anxious">Anxious</option>
         </select>
       </div>
       <div className="entries--container">
