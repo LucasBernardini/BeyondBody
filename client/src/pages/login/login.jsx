@@ -1,7 +1,7 @@
 import React from "react";
 import firebase from "firebase";
 import {
-  Redirect,
+  Redirect, Link
 } from "react-router-dom";
 import "./login.scss";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
@@ -24,7 +24,7 @@ export default class Login extends React.Component {
       <div className="login">
         {this.props.isSignedIn ? (
           <div>
-            <Redirect to="/journal" />
+            <Redirect to="/menu" />
           </div>
         ) : (
           <StyledFirebaseAuth className="login__config"
