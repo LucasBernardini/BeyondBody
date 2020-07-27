@@ -1,11 +1,11 @@
 import React from 'react'
 import './navbar.scss'
 import firebase from "firebase";
-import { BrowserRouter as Link, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 
 export default function Navbar(props) {
     const history = useHistory();
-
     return (
         <div className="style">
             {props.isSignedIn ? (
