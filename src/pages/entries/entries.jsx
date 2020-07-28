@@ -18,11 +18,11 @@ export default function Entries(props) {
 
   
   const selectMoods = (e) => {
-    const moods = ["optimistic","focused","angry","stressed","depressed","happy","anxious"];
+    const mood = ["optimistic","focused","angry","stressed","depressed","happy","anxious"];
     if (e.target.value === "all") {
-        setMoods(moods)
+        setMoods(mood)
       } else {
-        setMoods(moods.filter(m => m === e.target.value))
+        setMoods(mood.filter(m => m === e.target.value))
       }
   }
 

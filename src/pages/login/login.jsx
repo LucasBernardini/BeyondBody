@@ -1,7 +1,7 @@
 import React from "react";
 import firebase from "firebase";
 import {
-  Redirect, Link
+  Redirect
 } from "react-router-dom";
 import "./login.scss";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
