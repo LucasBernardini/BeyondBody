@@ -26,7 +26,7 @@ export default function Navbar(props) {
             </div>
             <div>
             <Link exact to="/login">
-            <button className="navbar__button">SignIn</button>
+            <button className="navbar__button signIn">SignIn</button>
             </Link>
             </div>
             </div>

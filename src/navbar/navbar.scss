@@ -1,11 +1,11 @@
 @import "../reusable-styling/mixins/mixins";
-@import '../reusable-styling/fonts';
+@import "../reusable-styling/fonts";
 
-body{
+body {
     font-family: "Raleway";
 }
 
-.style{
+.style {
     background-color: $melon;
     color: $liver;
     height: 7rem;
@@ -13,7 +13,7 @@ body{
     border-radius: 15px;
 }
 
-.navbar{
+.navbar {
     background-color: $melon;
     color: $liver;
     height: 7rem;
@@ -23,31 +23,54 @@ body{
     padding: auto;
     align-items: center;
     border-radius: 10px;
-    
-    &__header{
+
+    &__header {
         margin: auto 16px;
         padding: 0 16px;
         font-size: 16px;
         font-family: "Pacifico";
-        @include tabletSize{
+        @include tabletSize {
             font-size: 24px;
             margin: auto 130px;
         }
     }
-    &__streak{
+    &__streak {
         margin: auto 16px;
         padding: 0 16px;
         font-size: 16px;
     }
-    &__button{
+    &__button {
         @include button;
         margin: auto 16px;
-                        @include tabletSize{
-                            font-size: 20px;
-                            margin: auto 130px;
-                        }
-                        &:hover{
-                            @include buttonHover;
-                        }
+        @include tabletSize {
+            font-size: 20px;
+            margin: auto 130px;
+        }
+        &:hover {
+            @include buttonHover;
+        }
+    }
+}
+
+.signIn {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
