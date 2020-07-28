@@ -1,36 +1,49 @@
-import React from 'react'
-import './navbar.scss'
+import React from "react";
+import "./navbar.scss";
 import firebase from "firebase";
 import { useHistory, Link } from "react-router-dom";
 
-
 export default function Navbar(props) {
-    const history = useHistory();
-    return (
-        <div className="style">
-            {props.isSignedIn ? (
+  const history = useHistory();
+  return (
+    <div className="style">
+      {props.isSignedIn ? (
         <div className="navbar">
-        <div>
-        <h1 className="navbar__header">Beyond <br />Body</h1>
-        </div>
-        <div>
-        <Link exact to="/">
-        <button className="navbar__button" onClick={firebase.auth().signOut().then(() => history.push("/"))} >Sign Out</button>
-        </Link>
-        </div>
+          <div>
+            <h1 className="navbar__header">
+              Beyond <br />
+              Body
+            </h1>
           </div>
-        ) : (
-            <div className="navbar">
-            <div>
-            <h1 className="navbar__header">Beyond <br />Body</h1>
-            </div>
-            <div>
-            <Link exact to="/login">
-            <button className="navbar__button signIn">Sign In</button>
+          <div>
+            <Link exact to="/">
+              <button
+                className="navbar__button"
+                onClick={firebase
+                  .auth()
+                  .signOut()
+                  .then(() => history.push("/"))}
+              >
+                Sign Out
+              </button>
             </Link>
-            </div>
-            </div>
-        )}
+          </div>
         </div>
-    )
+      ) : (
+        <div className="navbar">
+          <div>
+            <h1 className="navbar__header">
+              Beyond <br />
+              Body
+            </h1>
+          </div>
+          <div>
+            <Link exact to="/login">
+              <button className="navbar__button signIn">Sign In</button>
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

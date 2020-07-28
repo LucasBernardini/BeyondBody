@@ -3,7 +3,7 @@ import "./about.scss";
 import { Link } from "react-router-dom";
 import linkedIn from "../../assets/logos/logo-linkedin.svg";
 import email from "../../assets/logos/mail.svg";
-import profilePic from "../../assets/images/profilePic.jpg"
+import profilePic from "../../assets/images/profilePic.jpg";
 
 export default function About() {
   return (
@@ -33,15 +33,16 @@ export default function About() {
           <h2 className="about__sub">About the Creator</h2>
           <h3 className="about__name">Lucas Bernardini</h3>
           <div className="about__container--bio">
-          <img className="about__profilePic" src={profilePic} alt="profile"/>
-          <p className="about__content">
-            Lucas is a recent graduate from Brainstation's immersive 12 week Web
-            Development Bootcamp. His working experience stems from a background
-            in banking and finance. Lucas has made the career transition to
-            becoming a developer due to his passion for technology, creativity
-            and problem solving. He is currently open and available to work,
-            feel free to reach out through one of the methods listed below!
-          </p>
+            <img className="about__profilePic" src={profilePic} alt="profile" />
+            <p className="about__content">
+              Lucas is a recent graduate from BrainStation's immersive 12 week
+              Web Development Bootcamp. His work previous work experience
+              includes various roles in the banking and finance industries.
+              Lucas has made the career transition to becoming a developer due
+              to his passion for technology, creativity and problem solving. He
+              is currently open and available for work, feel free to reach out
+              through one of the methods listed below!
+            </p>
           </div>
           <div className="about__contact">
             <a href="https://www.linkedin.com/in/lucas-bernardini/">

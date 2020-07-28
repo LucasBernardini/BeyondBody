@@ -1,8 +1,6 @@
 import React from "react";
 import firebase from "firebase";
-import {
-  Redirect
-} from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import "./login.scss";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
@@ -15,7 +13,7 @@ export default class Login extends React.Component {
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
     callbacks: {
-      signInSuccess: (user) => user.uid
+      signInSuccess: (user) => user.uid,
     },
   };
 
@@ -27,7 +25,8 @@ export default class Login extends React.Component {
             <Redirect to="/menu" />
           </div>
         ) : (
-          <StyledFirebaseAuth className="login__config"
+          <StyledFirebaseAuth
+            className="login__config"
             uiConfig={this.uiConfig}
             firebaseAuth={firebase.auth()}
           />

@@ -139,8 +139,8 @@ export default class Journal extends React.Component {
                   </div>
 
                   <h2 className="journal__subHead">
-                    Take your thoughts and write them down to clear your
-                    mind, you can review all of your entries at any time.
+                    Take your thoughts and write them down to clear your mind,
+                    you can review all of your entries at any time.
                   </h2>
                   <textarea
                     onChange={this.textInput}
