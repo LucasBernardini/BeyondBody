@@ -13,6 +13,7 @@ export default function Entries(props) {
     "depressed",
     "happy",
     "anxious",
+    "frustrated"
   ]);
 
   React.useEffect(() => {
@@ -33,6 +34,7 @@ export default function Entries(props) {
       "depressed",
       "happy",
       "anxious",
+      "frustrated"
     ];
     if (e.target.value === "all") {
       setMoods(moods);
