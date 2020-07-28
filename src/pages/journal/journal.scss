@@ -50,7 +50,6 @@ body{
         border: 3px solid $melon;
         width: 90%;
         height: 140px;
-        // background-color:;
         padding: 10px;
         font-family: "Raleway";
 
@@ -58,6 +57,9 @@ body{
     &__button{
         margin-top: 40px;
         @include button;
+        &:hover{
+            @include buttonHover;
+        }
     }
 }
 

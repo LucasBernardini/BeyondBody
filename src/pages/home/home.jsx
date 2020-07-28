@@ -45,7 +45,7 @@ export default function Home(props) {
         )}
       <Link to="/login">
         <button className="home__button">
-          <span>Continue</span>
+          Continue
         </button>
       </Link>
     </div>

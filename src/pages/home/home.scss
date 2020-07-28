@@ -39,5 +39,8 @@ body{
         margin: auto 16px;
         margin-top: 25px;
         align-self: flex-end;
+        &:hover{
+            @include buttonHover;
+        }
     }
 }

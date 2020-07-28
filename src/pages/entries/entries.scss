@@ -11,6 +11,9 @@ body {
         position: fixed;
         top: 400px;
         right: 16px;
+        &:hover{
+            @include buttonHover;
+        }
     }
     &__filter {
         background-color: $apricot;

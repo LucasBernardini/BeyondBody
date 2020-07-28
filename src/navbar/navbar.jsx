@@ -1,7 +1,7 @@
 import React from 'react'
 import './navbar.scss'
 import firebase from "firebase";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 
 export default function Navbar(props) {
@@ -14,7 +14,9 @@ export default function Navbar(props) {
         <h1 className="navbar__header">Beyond <br />Body</h1>
         </div>
         <div>
+        <Link exact to="/">
         <button className="navbar__button" onClick={firebase.auth().signOut().then(() => history.push("/"))} >Signout</button>
+        </Link>
         </div>
           </div>
         ) : (

@@ -46,6 +46,8 @@ body{
                             font-size: 20px;
                             margin: auto 130px;
                         }
-
+                        &:hover{
+                            @include buttonHover;
+                        }
     }
 }

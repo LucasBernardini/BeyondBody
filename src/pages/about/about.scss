@@ -49,6 +49,9 @@ body{
     position: fixed;
     top: 400px;
     right: 16px;
+    &:hover{
+        @include buttonHover;
+    }
     }
     &__contact{
         display: flex;

@@ -21,3 +21,11 @@
         font-size: 18px;
         color: $liver;
 }
+
+
+@mixin buttonHover{
+    width: 12rem;
+    height: 3rem;
+    font-weight: bold;
+   
+}
