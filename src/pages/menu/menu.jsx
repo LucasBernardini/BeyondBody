@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import "./menu.scss";
 
 export default function Menu(props) {
-  return (
+  return ( 
+    
+    <div>
+    {props.isSignedIn ? (
     <div className="menu">
       <Link className="menu__entry--container" to="/journal">
         <h2 className="menu__title">Add Journal Entry</h2>
@@ -15,5 +18,11 @@ export default function Menu(props) {
         <h2 className="menu__title">About</h2>
       </Link>
     </div>
+      
+      ) : (
+        
+        <Redirect to="/menu" />
+        )}
+        </div>
   );
 }

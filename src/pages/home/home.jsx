@@ -22,11 +22,12 @@ export default function Home(props) {
           Take a few moment to reflect on your day and how you are feeling
           overall. When you are ready, click continue and get started.
         </p>
-        <img className="home__image" src={photo} alt="zen photo"/>
+        <img className="home__image" src={photo} alt="zen"/>
       </div>     
           </div>
         ) : (
           <div className="home__body">
+            <h4>Please Sign in before you begin</h4>
         <p>
           Hello, Welcome to Beyond Body, a journalling experience that allows
           you to express your emotions and thoughts to improve your overall
@@ -40,12 +41,12 @@ export default function Home(props) {
           Take a few moment to reflect on your day and how you are feeling
           overall. When you are ready, click continue and get started.
         </p>
-        <img className="home__image" src={photo} alt="zen photo"/>
+        <img className="home__image" src={photo} alt="zen"/>
       </div>  
         )}
       <Link to="/login">
         <button className="home__button">
-          Continue
+          <span>Continue</span>
         </button>
       </Link>
     </div>

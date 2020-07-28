@@ -15,7 +15,7 @@ export default class Login extends React.Component {
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
     callbacks: {
-      signInSuccess: (user) => user.uid,
+      signInSuccess: (user) => user.uid
     },
   };
 

@@ -15,13 +15,20 @@ export default function Navbar(props) {
         </div>
         <div>
         <Link exact to="/">
-        <button className="navbar__button" onClick={firebase.auth().signOut().then(() => history.push("/"))} >Signout</button>
+        <button className="navbar__button" onClick={firebase.auth().signOut().then(() => history.push("/"))} >SignOut</button>
         </Link>
         </div>
           </div>
         ) : (
-            <div style={{justifyContent: "center" }} className="navbar">
+            <div className="navbar">
+            <div>
             <h1 className="navbar__header">Beyond <br />Body</h1>
+            </div>
+            <div>
+            <Link exact to="/login">
+            <button className="navbar__button">SignIn</button>
+            </Link>
+            </div>
             </div>
         )}
         </div>
