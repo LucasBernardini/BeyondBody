@@ -13,7 +13,7 @@ export default function Footer() {
                 <Link to="/about"className="footer__direct">About</Link>
             </div>
             <div className="footer__container--2">
-                <p>Are you seeking help? Visit Canadas <a className="footer__help" href="https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-get-help.html">Mental Health support page</a></p>
+                <p>Are you seeking help? Visit Canada's <a className="footer__help" href="https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-get-help.html" target="_blank" >Mental health support page</a></p>
             </div>
             </div>
         </div>

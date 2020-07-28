@@ -10,7 +10,6 @@ export default class Journal extends React.Component {
   };
 
   journalEntry = () => {
-    // console.log(event);
     const db = firebase.firestore();
     db.collection(this.props.userUID)
       .doc()
@@ -24,12 +23,10 @@ export default class Journal extends React.Component {
 
   valueInput = (e) => {
     this.setState({ mood: [e.target.value] });
-    //   console.log(this.state.mood)
   };
 
   textInput = (e) => {
     this.setState({ entry: e.target.value });
-    //   console.log(this.state.entry)
   };
 
   render() {
@@ -106,6 +103,18 @@ export default class Journal extends React.Component {
                   </div>
                   <div className="journal__container">
                     <label className="journal__mood">
+                      Frustrated
+                      <input
+                        value="frustrated"
+                        onChange={this.valueInput}
+                        className="journal__mood--check"
+                        type="checkbox"
+                      />
+                      <span className="journal__mood--check"></span>
+                    </label>
+                  </div>
+                  <div className="journal__container">
+                    <label className="journal__mood">
                       Happy
                       <input
                         value="happy"
@@ -130,9 +139,8 @@ export default class Journal extends React.Component {
                   </div>
 
                   <h2 className="journal__subHead">
-                    Let's take your thoughts and write them down to clear your
-                    mind, and keep a record of your these thoughts to reflect
-                    back at a later time.
+                    Take your thoughts and write them down to clear your
+                    mind, you can review all of your entries at any time.
                   </h2>
                   <textarea
                     onChange={this.textInput}
@@ -147,7 +155,7 @@ export default class Journal extends React.Component {
                       onClick={this.journalEntry}
                       className="journal__button"
                     >
-                      submit
+                      Submit
                     </button>
                   </Link>
                 </form>

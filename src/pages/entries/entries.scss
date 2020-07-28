@@ -9,8 +9,8 @@ body {
     &__button {
         @include button;
         position: fixed;
-        top: 400px;
-        right: 16px;
+        top: 240px;
+    left: 36px;
         &:hover{
             @include buttonHover;
         }

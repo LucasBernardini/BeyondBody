@@ -10,7 +10,7 @@ export default function Home(props) {
           <div>
       <div className="home__body">
         <p>
-          Hello, Welcome to Beyond Body, a journalling experience that allows
+          Hello, Welcome to BeyondBody, a journalling experience that allows
           you to express your emotions and thoughts to improve your overall
           mental health. Journalling online allows you access to your notes at
           any given time, on any device. 
@@ -27,10 +27,10 @@ export default function Home(props) {
           </div>
         ) : (
           <div className="home__body">
-            <h4 className="pulsate" >Please Sign in before you begin</h4>
-        <p>
-          Hello, Welcome to Beyond Body, a journalling experience that allows
-          you to express your emotions and thoughts to improve your overall
+            <h4 className="pulsate" >Please sign in before you begin</h4>
+          <p>
+          Hello, Welcome to BeyondBody. A journalling experience that allows
+          you to express your emotions in writing, to improve your overall
           mental health. Journalling online allows you access to your notes at
           any given time, on any device. 
           <br />

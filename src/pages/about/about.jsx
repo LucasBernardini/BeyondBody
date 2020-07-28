@@ -11,7 +11,7 @@ export default function About() {
       <h1 className="about__header">Beyond Body - Your Personal Journal</h1>
       <div className="about">
         <div className="about__container">
-          <h2 className="about__sub">About The App</h2>
+          <h2 className="about__sub">About the App</h2>
           <p className="about__content">
             BeyondBody was created to address the growing concerns of mental
             health challenges people are faced with. These challenges have been
@@ -33,9 +33,9 @@ export default function About() {
           <h2 className="about__sub">About the Creator</h2>
           <h3 className="about__name">Lucas Bernardini</h3>
           <div className="about__container--bio">
-          <img className="about__profilePic" src={profilePic} alt="profile photo"/>
+          <img className="about__profilePic" src={profilePic} alt="profile"/>
           <p className="about__content">
-            Lucas is a recent graduate from Brainstations immersive 12 week Web
+            Lucas is a recent graduate from Brainstation's immersive 12 week Web
             Development Bootcamp. His working experience stems from a background
             in banking and finance. Lucas has made the career transition to
             becoming a developer due to his passion for technology, creativity
@@ -55,7 +55,7 @@ export default function About() {
         </div>
       </div>
       <Link to="/menu">
-        <button className="about__button">Back To Menu</button>
+        <button className="about__button">Back to Menu</button>
       </Link>
     </div>
   );
